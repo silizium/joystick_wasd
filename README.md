@@ -54,6 +54,10 @@ This might be an issue of change in future by demand.
 
 - Kubuntu 14.04 64bit, PlayOnLinux, World Of Tanks
 
+# issues and known bugs
+
+- can "swallow" keystrokes and mess up a bit after some time driving around. A click on the keyboard solves the issue to get the thing straight again.
+
 # license
 
 Released under [LGPL v3](http://www.gnu.org/copyleft/lesser.html).
