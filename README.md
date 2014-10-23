@@ -26,8 +26,7 @@ KERNEL=="uinput", GROUP:="uinput", MODE:="0660"
 
 Then add the group uinput and add your user. Restart.
 
-sudo groupadd uinput
-sudo usermod -a -G uinput <USERNAME>
+sudo groupadd uinput && sudo usermod -a -G uinput <USERNAME>
 
 # license
 
