@@ -50,6 +50,10 @@ The analog input from the sticks on the pad is transformed into pulsed keyboard 
 
 This might be an issue of change in future by demand.
 
+# tested
+
+- Kubuntu 14.04 64bit, PlayOnLinux, World Of Tanks
+
 # license
 
 Released under [LGPL v3](http://www.gnu.org/copyleft/lesser.html).
