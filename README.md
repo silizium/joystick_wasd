@@ -20,13 +20,15 @@ The joystick will dump a view random "sddddd", which you can stop by turning the
 
 The program fetches from /dev/input/js0 and outputs into /dev/uinput. If you don't want to start the program as root, you will have access issues to /dev/uinput. Just do this:
 
-Make a file 14-uinput.rules and put it into /etc/udev/rules.d/
+Make a file "14-uinput.rules" and put it into /etc/udev/rules.d/
 
 KERNEL=="uinput", GROUP:="uinput", MODE:="0660"
 
 Then add the group uinput and add your user. Restart.
 
 sudo groupadd uinput && sudo usermod -a -G uinput <USERNAME>
+
+It's good to have a uinput group anyway to control access to the uinput device.
 
 # license
 
