@@ -30,6 +30,10 @@ sudo groupadd uinput && sudo usermod -a -G uinput <USERNAME>
 
 It's good to have a uinput group anyway to control access to the uinput device.
 
+The analog input from the sticks on the pad is transformed into pulsed keyboard hits. So the further you push the stick the longer will the key be pressed in its 20ms timeframe until it's hold down at full throttle or left up when the stick is centered. So while you in reality have just a digital "drive" or "not drive" by the keyboard the stick simulated analog movement by pulsing those digigal states rapidly. While the technic works fine with throttle the turning may occur a bit pulsed, because there is less momentum in turning. But to smooth this out I would have to make the pulses faster and shorter and that would collide with the inertia of objects as well as it would launch very many keyboard events. 
+
+This might be an issue of change in future by demand.
+
 # license
 
 Released under [LGPL v3](http://www.gnu.org/copyleft/lesser.html).
