@@ -20,17 +20,17 @@ The joystick will dump a view random "sddddd", which you can stop by turning the
 
 - left stick - drive and turn
 - right stick - turret rotation and aim
+- jumppad - fast lookaround (in work)
 - left upper button - left mousebutton
 - left lower button - right mousebutton
-- jumppad - fast lookaround (in work)
 - right upper button - zoom in (in work)
 - right lower button - zoom out (in work)
-- button 1 - hold & fire
-- button 2 - reload
-- button 3 - lock
-- button 4 - zoom
-- button 9 - T
-- button 10 - Z (menu)
+- button 1 - SPACE=hold & fire
+- button 2 - R=reload
+- button 3 - X=lock
+- button 4 - LEFT_SHIFT=zoom
+- button 9 - KEY_T
+- button 10 - KEY_Z (menu)
 
 # how it's done
 
