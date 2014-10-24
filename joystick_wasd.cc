@@ -24,7 +24,7 @@ int main(int argc, char** argv)
   JoystickEvent event;
   PulseKey movekey(input, KEY_S, KEY_W);
   PulseKey turnkey(input, KEY_D, KEY_A);
-  int dx=0, dy=0, jmpx=0, jmpy=0;
+  int dx=0, dy=0, jmpx=0 /*, jmpy=0*/;
   // Ensure that it was found and that we can use it
   if(!joystick.isFound())  {
     printf("open joystick failed.\n");
@@ -104,27 +104,35 @@ int main(int argc, char** argv)
 			case 4: 
 				if(event.value==0){
 					input.relXY(-jmpx, 0);
+					input.key(BTN_RIGHT, 0);
 					jmpx=0;
 				}else if(event.value>0){
-					jmpx=1000;
+					jmpx=700;
+					input.key(BTN_RIGHT, 1);
 					input.relXY(jmpx, 0);
 				}else {
-					jmpx=-1000;
+					jmpx=-700;
+					input.key(BTN_RIGHT, 1);
 					input.relXY(jmpx, 0);
 				}
 				break;
 				//jumppad up-down
 			case 5:
+				/*
 				if(event.value==0){
-					input.relXY(0, -jmpy);
+					input.relXY(-jmpy, 0);
+					input.key(BTN_RIGHT, 0);
 					jmpy=0;
 				}else if(event.value>0){
 					jmpy=1000;
-					input.relXY(0, jmpy);
+					input.key(BTN_RIGHT, 1);
+					input.relXY(jmpy, 0);
 				}else {
 					jmpy=-1000;
-					input.relXY(0, jmpy);
+					input.key(BTN_RIGHT, 1);
+					input.relXY(jmpy, 0);
 				}
+				*/
 				break;
 			default: //printf("Axis %u is at position %d\n", event.number, event.value);
 				break;
